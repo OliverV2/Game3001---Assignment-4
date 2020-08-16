@@ -29,8 +29,17 @@ void PlayScene::draw()
 		Util::DrawRect(m_pPlaneSprite->getTransform()->position - glm::vec2(m_pPlaneSprite->getWidth() * 0.5f, m_pPlaneSprite->getHeight() * 0.5f),
 			m_pPlaneSprite->getWidth(), m_pPlaneSprite->getHeight());
 
-		/*Util::DrawRect(m_pObstacle->getTransform()->position - glm::vec2(m_pObstacle->getWidth() * 0.5f, m_pObstacle->getHeight() * 0.5f),
-			m_pObstacle->getWidth(), m_pObstacle->getHeight());*/
+		Util::DrawRect(m_pObstacle->getTransform()->position - glm::vec2(m_pObstacle->getWidth(), m_pObstacle->getHeight()),
+			m_pObstacle->getWidth(), m_pObstacle->getHeight());
+
+		Util::DrawRect(m_pObstacle1->getTransform()->position - glm::vec2(m_pObstacle1->getWidth() , m_pObstacle1->getHeight() ),
+			m_pObstacle1->getWidth(), m_pObstacle1->getHeight());
+
+		Util::DrawRect(m_pObstacle2->getTransform()->position - glm::vec2(m_pObstacle2->getWidth(), m_pObstacle2->getHeight()),
+			m_pObstacle2->getWidth(), m_pObstacle2->getHeight());
+
+		Util::DrawRect(m_pObstacle3->getTransform()->position - glm::vec2(m_pObstacle3->getWidth(), m_pObstacle3->getHeight()),
+			m_pObstacle3->getWidth(), m_pObstacle3->getHeight());
 			
 		m_displayGrid();
 
@@ -43,11 +52,14 @@ void PlayScene::update()
 {
 	updateDisplayList();
 
-	m_bPlayerHasLOS = CollisionManager::LOSCheck(m_pPlayer, m_pPlaneSprite, m_pObstacle);
+	m_bPlayerHasLOS = CollisionManager::LOSCheck(m_pPlayer, m_pPlaneSprite, m_pObstacle, m_pObstacle1, m_pObstacle2, m_pObstacle3);
 
 	CollisionManager::AABBCheck(m_pPlayer, m_pPlaneSprite);
 
 	CollisionManager::AABBCheck(m_pPlayer, m_pObstacle);
+	CollisionManager::AABBCheck(m_pPlayer, m_pObstacle1);
+	CollisionManager::AABBCheck(m_pPlayer, m_pObstacle2);
+	CollisionManager::AABBCheck(m_pPlayer, m_pObstacle3);
 
 	m_setGridLOS();
 
@@ -107,6 +119,7 @@ void PlayScene::handleEvents()
 	// handle player movement if no Game Controllers found
 	if (SDL_NumJoysticks() < 1)
 	{
+		
 		if (EventManager::Instance().isKeyDown(SDL_SCANCODE_A))
 		{
 			m_pPlayer->setAnimationState(PLAYER_RUN_LEFT);
@@ -117,6 +130,7 @@ void PlayScene::handleEvents()
 			m_pPlayer->getRigidBody()->velocity = glm::vec2(-5.0f, 0.0f);
 			m_pPlayer->getTransform()->position += m_pPlayer->getRigidBody()->velocity;
 			m_pPlayer->getRigidBody()->velocity *= m_pPlayer->getRigidBody()->velocity * 0.9f;
+
 		}
 		else if (EventManager::Instance().isKeyDown(SDL_SCANCODE_D))
 		{
@@ -138,7 +152,6 @@ void PlayScene::handleEvents()
 			m_pPlayer->getTransform()->position += m_pPlayer->getRigidBody()->velocity;
 			m_pPlayer->getRigidBody()->velocity *= m_pPlayer->getRigidBody()->velocity * 0.9f;
 		}
-
 		else if (EventManager::Instance().isKeyDown(SDL_SCANCODE_S))
 		{
 			m_pPlayer->setAnimationState(PLAYER_RUN_LEFT);
@@ -301,7 +314,8 @@ void PlayScene::m_setGridLOS()
 {
 	for (auto node : m_pGrid)
 	{
-		node->setLOS(CollisionManager::LOSCheck(node, m_pPlayer, m_pObstacle));
+		node->setLOS(CollisionManager::LOSCheck(node, m_pPlayer, m_pObstacle, m_pObstacle1, m_pObstacle2, m_pObstacle3));
+		
 	}
 }
 
@@ -901,11 +915,24 @@ void PlayScene::start()
 	m_pObstacle->getTransform()->position = glm::vec2(400.0f, 160.0f);
 	addChild(m_pObstacle);
 
-	m_pObstacle = new Obstacle();
-	m_pObstacle->setWidth(80.0f);
-	m_pObstacle->setHeight(80.0f);
-	m_pObstacle->getTransform()->position = glm::vec2(480.0f, 160.0f);
-	addChild(m_pObstacle);
+	m_pObstacle1 = new Obstacle();
+	m_pObstacle1->setWidth(80.0f);
+	m_pObstacle1->setHeight(80.0f);
+	m_pObstacle1->getTransform()->position = glm::vec2(480.0f, 160.0f);
+	addChild(m_pObstacle1);
+
+	m_pObstacle2 = new Obstacle();
+	m_pObstacle2->setWidth(80.0f);
+	m_pObstacle2->setHeight(80.0f);
+	m_pObstacle2->getTransform()->position = glm::vec2(80.0f, 80.0f);
+	addChild(m_pObstacle2);
+
+	m_pObstacle3= new Obstacle();
+	m_pObstacle3->setWidth(80.0f);
+	m_pObstacle3->setHeight(80.0f);
+	m_pObstacle3->getTransform()->position = glm::vec2(160.0f, 80.0f);
+	addChild(m_pObstacle3);
+	
 
 	// Plane Sprite
 	m_pPlaneSprite = new Plane();

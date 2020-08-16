@@ -208,7 +208,7 @@ bool CollisionManager::lineAABBCheck(Ship* object1, GameObject* object2)
 	return false;
 }
 
-bool CollisionManager::LOSCheck(DisplayObject* from, DisplayObject* to, DisplayObject* obstacle)
+bool CollisionManager::LOSCheck(DisplayObject* from, DisplayObject* to, DisplayObject* obstacle, DisplayObject* obstacle1, DisplayObject* obstacle2, DisplayObject* obstacle3)
 {
 	const auto lineStart = from->getTransform()->position;
 	const auto lineEnd = to->getTransform()->position;
@@ -218,6 +218,24 @@ bool CollisionManager::LOSCheck(DisplayObject* from, DisplayObject* to, DisplayO
 	const auto boxHeight = obstacle->getHeight();
 	const int halfBoxHeight = boxHeight * 0.5f;
 	const auto boxStart = obstacle->getTransform()->position - glm::vec2(halfBoxWidth, halfBoxHeight);
+	//
+	const auto boxWidth1 = obstacle1->getWidth();
+	const int halfBoxWidth1 = boxWidth1 * 0.5f;
+	const auto boxHeight1 = obstacle1->getHeight();
+	const int halfBoxHeight1 = boxHeight1 * 0.5f;
+	const auto boxStart1 = obstacle1->getTransform()->position - glm::vec2(halfBoxWidth1, halfBoxHeight1);
+	//
+	const auto boxWidth2 = obstacle2->getWidth();
+	const int halfBoxWidth2 = boxWidth2 * 0.5f;
+	const auto boxHeight2 = obstacle2->getHeight();
+	const int halfBoxHeight2 = boxHeight2 * 0.5f;
+	const auto boxStar2t = obstacle2->getTransform()->position - glm::vec2(halfBoxWidth2, halfBoxHeight2);
+	//
+	const auto boxWidth3 = obstacle3->getWidth();
+	const int halfBoxWidth3 = boxWidth3 * 0.5f;
+	const auto boxHeight3 = obstacle3->getHeight();
+	const int halfBoxHeight3 = boxHeight3 * 0.5f;
+	const auto boxStart3 = obstacle3->getTransform()->position - glm::vec2(halfBoxWidth3, halfBoxHeight3);
 
 	if (lineRectCheck(lineStart, lineEnd, boxStart, boxWidth, boxHeight))
 	{

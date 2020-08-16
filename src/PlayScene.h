@@ -47,6 +47,9 @@ private:
 	bool m_bPlayerHasLOS;
 
 	Obstacle* m_pObstacle;
+	Obstacle* m_pObstacle1;
+	Obstacle* m_pObstacle2;
+	Obstacle* m_pObstacle3;
 
 	Tile* m_pTile;
 
@@ -65,6 +68,8 @@ private:
 	int m_targetPathNodeIndex;
 	PathNode* m_pTargetPathNode;
 	void m_movePlaneToTargetNode();
+
+	
 	
 	
 };
