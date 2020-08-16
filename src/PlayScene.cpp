@@ -29,8 +29,8 @@ void PlayScene::draw()
 		Util::DrawRect(m_pPlaneSprite->getTransform()->position - glm::vec2(m_pPlaneSprite->getWidth() * 0.5f, m_pPlaneSprite->getHeight() * 0.5f),
 			m_pPlaneSprite->getWidth(), m_pPlaneSprite->getHeight());
 
-		Util::DrawRect(m_pObstacle->getTransform()->position - glm::vec2(m_pObstacle->getWidth() * 0.5f, m_pObstacle->getHeight() * 0.5f),
-			m_pObstacle->getWidth(), m_pObstacle->getHeight());
+		/*Util::DrawRect(m_pObstacle->getTransform()->position - glm::vec2(m_pObstacle->getWidth() * 0.5f, m_pObstacle->getHeight() * 0.5f),
+			m_pObstacle->getWidth(), m_pObstacle->getHeight());*/
 			
 		m_displayGrid();
 
@@ -402,8 +402,511 @@ void PlayScene::start()
 	
 	m_bDebugMode = false;
 	m_bPatrolMode = false;
-	
-	
+
+	//Tile Texture
+	m_pTile = new Tile();
+	m_pTile->setWidth((80.0f));
+	m_pTile->setHeight(80.0f);
+	m_pTile->getTransform()->position = glm::vec2(0.0f, 0.0f);
+	addChild(m_pTile);
+
+	m_pTile = new Tile();
+	m_pTile->setWidth((80.0f));
+	m_pTile->setHeight(80.0f);
+	m_pTile->getTransform()->position = glm::vec2(80.0f, 0.0f);
+	addChild(m_pTile);
+
+	m_pTile = new Tile();
+	m_pTile->setWidth((80.0f));
+	m_pTile->setHeight(80.0f);
+	m_pTile->getTransform()->position = glm::vec2(160.0f, 0.0f);
+	addChild(m_pTile);
+
+	m_pTile = new Tile();
+	m_pTile->setWidth((80.0f));
+	m_pTile->setHeight(80.0f);
+	m_pTile->getTransform()->position = glm::vec2(240.0f, 0.0f);
+	addChild(m_pTile);
+
+	m_pTile = new Tile();
+	m_pTile->setWidth((80.0f));
+	m_pTile->setHeight(80.0f);
+	m_pTile->getTransform()->position = glm::vec2(320.0f, 0.0f);
+	addChild(m_pTile);
+
+	m_pTile = new Tile();
+	m_pTile->setWidth((80.0f));
+	m_pTile->setHeight(80.0f);
+	m_pTile->getTransform()->position = glm::vec2(400.0f, 0.0f);
+	addChild(m_pTile);
+
+	m_pTile = new Tile();
+	m_pTile->setWidth((80.0f));
+	m_pTile->setHeight(80.0f);
+	m_pTile->getTransform()->position = glm::vec2(480.0f, 0.0f);
+	addChild(m_pTile);
+
+	m_pTile = new Tile();
+	m_pTile->setWidth((80.0f));
+	m_pTile->setHeight(80.0f);
+	m_pTile->getTransform()->position = glm::vec2(560.0f, 0.0f);
+	addChild(m_pTile);
+
+	m_pTile = new Tile();
+	m_pTile->setWidth((80.0f));
+	m_pTile->setHeight(80.0f);
+	m_pTile->getTransform()->position = glm::vec2(640.0f, 0.0f);
+	addChild(m_pTile);
+
+	m_pTile = new Tile();
+	m_pTile->setWidth((80.0f));
+	m_pTile->setHeight(80.0f);
+	m_pTile->getTransform()->position = glm::vec2(720.0f, 0.0f);
+	addChild(m_pTile);
+
+	//Tile Texture
+	m_pTile = new Tile();
+	m_pTile->setWidth((80.0f));
+	m_pTile->setHeight(80.0f);
+	m_pTile->getTransform()->position = glm::vec2(0.0f, 80.0f);
+	addChild(m_pTile);
+
+	m_pTile = new Tile();
+	m_pTile->setWidth((80.0f));
+	m_pTile->setHeight(80.0f);
+	m_pTile->getTransform()->position = glm::vec2(80.0f, 80.0f);
+	addChild(m_pTile);
+
+	m_pTile = new Tile();
+	m_pTile->setWidth((80.0f));
+	m_pTile->setHeight(80.0f);
+	m_pTile->getTransform()->position = glm::vec2(160.0f, 80.0f);
+	addChild(m_pTile);
+
+	m_pTile = new Tile();
+	m_pTile->setWidth((80.0f));
+	m_pTile->setHeight(80.0f);
+	m_pTile->getTransform()->position = glm::vec2(240.0f, 80.0f);
+	addChild(m_pTile);
+
+	m_pTile = new Tile();
+	m_pTile->setWidth((80.0f));
+	m_pTile->setHeight(80.0f);
+	m_pTile->getTransform()->position = glm::vec2(320.0f, 80.0f);
+	addChild(m_pTile);
+
+	m_pTile = new Tile();
+	m_pTile->setWidth((80.0f));
+	m_pTile->setHeight(80.0f);
+	m_pTile->getTransform()->position = glm::vec2(400.0f, 80.0f);
+	addChild(m_pTile);
+
+	m_pTile = new Tile();
+	m_pTile->setWidth((80.0f));
+	m_pTile->setHeight(80.0f);
+	m_pTile->getTransform()->position = glm::vec2(480.0f, 80.0f);
+	addChild(m_pTile);
+
+	m_pTile = new Tile();
+	m_pTile->setWidth((80.0f));
+	m_pTile->setHeight(80.0f);
+	m_pTile->getTransform()->position = glm::vec2(560.0f, 80.0f);
+	addChild(m_pTile);
+
+	m_pTile = new Tile();
+	m_pTile->setWidth((80.0f));
+	m_pTile->setHeight(80.0f);
+	m_pTile->getTransform()->position = glm::vec2(640.0f, 80.0f);
+	addChild(m_pTile);
+
+	m_pTile = new Tile();
+	m_pTile->setWidth((80.0f));
+	m_pTile->setHeight(80.0f);
+	m_pTile->getTransform()->position = glm::vec2(720.0f, 80.0f);
+	addChild(m_pTile);
+
+
+	//Tile Texture
+	m_pTile = new Tile();
+	m_pTile->setWidth((80.0f));
+	m_pTile->setHeight(80.0f);
+	m_pTile->getTransform()->position = glm::vec2(0.0f, 160.0f);
+	addChild(m_pTile);
+
+	m_pTile = new Tile();
+	m_pTile->setWidth((80.0f));
+	m_pTile->setHeight(80.0f);
+	m_pTile->getTransform()->position = glm::vec2(80.0f, 160.0f);
+	addChild(m_pTile);
+
+	m_pTile = new Tile();
+	m_pTile->setWidth((80.0f));
+	m_pTile->setHeight(80.0f);
+	m_pTile->getTransform()->position = glm::vec2(160.0f, 160.0f);
+	addChild(m_pTile);
+
+	m_pTile = new Tile();
+	m_pTile->setWidth((80.0f));
+	m_pTile->setHeight(80.0f);
+	m_pTile->getTransform()->position = glm::vec2(240.0f, 160.0f);
+	addChild(m_pTile);
+
+	m_pTile = new Tile();
+	m_pTile->setWidth((80.0f));
+	m_pTile->setHeight(80.0f);
+	m_pTile->getTransform()->position = glm::vec2(320.0f, 160.0f);
+	addChild(m_pTile);
+
+	m_pTile = new Tile();
+	m_pTile->setWidth((80.0f));
+	m_pTile->setHeight(80.0f);
+	m_pTile->getTransform()->position = glm::vec2(400.0f, 160.0f);
+	addChild(m_pTile);
+
+	m_pTile = new Tile();
+	m_pTile->setWidth((80.0f));
+	m_pTile->setHeight(80.0f);
+	m_pTile->getTransform()->position = glm::vec2(480.0f, 160.0f);
+	addChild(m_pTile);
+
+	m_pTile = new Tile();
+	m_pTile->setWidth((80.0f));
+	m_pTile->setHeight(80.0f);
+	m_pTile->getTransform()->position = glm::vec2(560.0f, 160.0f);
+	addChild(m_pTile);
+
+	m_pTile = new Tile();
+	m_pTile->setWidth((80.0f));
+	m_pTile->setHeight(80.0f);
+	m_pTile->getTransform()->position = glm::vec2(640.0f, 160.0f);
+	addChild(m_pTile);
+
+	m_pTile = new Tile();
+	m_pTile->setWidth((80.0f));
+	m_pTile->setHeight(80.0f);
+	m_pTile->getTransform()->position = glm::vec2(720.0f, 160.0f);
+	addChild(m_pTile);
+
+
+	//Tile Texture
+	m_pTile = new Tile();
+	m_pTile->setWidth((80.0f));
+	m_pTile->setHeight(80.0f);
+	m_pTile->getTransform()->position = glm::vec2(0.0f, 240.0f);
+	addChild(m_pTile);
+
+	m_pTile = new Tile();
+	m_pTile->setWidth((80.0f));
+	m_pTile->setHeight(80.0f);
+	m_pTile->getTransform()->position = glm::vec2(80.0f, 240.0f);
+	addChild(m_pTile);
+
+	m_pTile = new Tile();
+	m_pTile->setWidth((80.0f));
+	m_pTile->setHeight(80.0f);
+	m_pTile->getTransform()->position = glm::vec2(160.0f, 240.0f);
+	addChild(m_pTile);
+
+	m_pTile = new Tile();
+	m_pTile->setWidth((80.0f));
+	m_pTile->setHeight(80.0f);
+	m_pTile->getTransform()->position = glm::vec2(240.0f, 240.0f);
+	addChild(m_pTile);
+
+	m_pTile = new Tile();
+	m_pTile->setWidth((80.0f));
+	m_pTile->setHeight(80.0f);
+	m_pTile->getTransform()->position = glm::vec2(320.0f, 240.0f);
+	addChild(m_pTile);
+
+	m_pTile = new Tile();
+	m_pTile->setWidth((80.0f));
+	m_pTile->setHeight(80.0f);
+	m_pTile->getTransform()->position = glm::vec2(400.0f, 240.0f);
+	addChild(m_pTile);
+
+	m_pTile = new Tile();
+	m_pTile->setWidth((80.0f));
+	m_pTile->setHeight(80.0f);
+	m_pTile->getTransform()->position = glm::vec2(480.0f, 240.0f);
+	addChild(m_pTile);
+
+	m_pTile = new Tile();
+	m_pTile->setWidth((80.0f));
+	m_pTile->setHeight(80.0f);
+	m_pTile->getTransform()->position = glm::vec2(560.0f, 240.0f);
+	addChild(m_pTile);
+
+	m_pTile = new Tile();
+	m_pTile->setWidth((80.0f));
+	m_pTile->setHeight(80.0f);
+	m_pTile->getTransform()->position = glm::vec2(640.0f, 240.0f);
+	addChild(m_pTile);
+
+	m_pTile = new Tile();
+	m_pTile->setWidth((80.0f));
+	m_pTile->setHeight(80.0f);
+	m_pTile->getTransform()->position = glm::vec2(720.0f, 240.0f);
+	addChild(m_pTile);
+
+	//Tile Texture
+	m_pTile = new Tile();
+	m_pTile->setWidth((80.0f));
+	m_pTile->setHeight(80.0f);
+	m_pTile->getTransform()->position = glm::vec2(0.0f, 320.0f);
+	addChild(m_pTile);
+
+	m_pTile = new Tile();
+	m_pTile->setWidth((80.0f));
+	m_pTile->setHeight(80.0f);
+	m_pTile->getTransform()->position = glm::vec2(80.0f, 320.0f);
+	addChild(m_pTile);
+
+	m_pTile = new Tile();
+	m_pTile->setWidth((80.0f));
+	m_pTile->setHeight(80.0f);
+	m_pTile->getTransform()->position = glm::vec2(160.0f, 320.0f);
+	addChild(m_pTile);
+
+	m_pTile = new Tile();
+	m_pTile->setWidth((80.0f));
+	m_pTile->setHeight(80.0f);
+	m_pTile->getTransform()->position = glm::vec2(240.0f, 320.0f);
+	addChild(m_pTile);
+
+	m_pTile = new Tile();
+	m_pTile->setWidth((80.0f));
+	m_pTile->setHeight(80.0f);
+	m_pTile->getTransform()->position = glm::vec2(320.0f, 320.0f);
+	addChild(m_pTile);
+
+	m_pTile = new Tile();
+	m_pTile->setWidth((80.0f));
+	m_pTile->setHeight(80.0f);
+	m_pTile->getTransform()->position = glm::vec2(400.0f, 320.0f);
+	addChild(m_pTile);
+
+	m_pTile = new Tile();
+	m_pTile->setWidth((80.0f));
+	m_pTile->setHeight(80.0f);
+	m_pTile->getTransform()->position = glm::vec2(480.0f, 320.0f);
+	addChild(m_pTile);
+
+	m_pTile = new Tile();
+	m_pTile->setWidth((80.0f));
+	m_pTile->setHeight(80.0f);
+	m_pTile->getTransform()->position = glm::vec2(560.0f, 320.0f);
+	addChild(m_pTile);
+
+	m_pTile = new Tile();
+	m_pTile->setWidth((80.0f));
+	m_pTile->setHeight(80.0f);
+	m_pTile->getTransform()->position = glm::vec2(640.0f, 320.0f);
+	addChild(m_pTile);
+
+	m_pTile = new Tile();
+	m_pTile->setWidth((80.0f));
+	m_pTile->setHeight(80.0f);
+	m_pTile->getTransform()->position = glm::vec2(720.0f, 320.0f);
+	addChild(m_pTile);
+
+
+	//Tile Texture
+	m_pTile = new Tile();
+	m_pTile->setWidth((80.0f));
+	m_pTile->setHeight(80.0f);
+	m_pTile->getTransform()->position = glm::vec2(0.0f, 400.0f);
+	addChild(m_pTile);
+
+	m_pTile = new Tile();
+	m_pTile->setWidth((80.0f));
+	m_pTile->setHeight(80.0f);
+	m_pTile->getTransform()->position = glm::vec2(80.0f, 400.0f);
+	addChild(m_pTile);
+
+	m_pTile = new Tile();
+	m_pTile->setWidth((80.0f));
+	m_pTile->setHeight(80.0f);
+	m_pTile->getTransform()->position = glm::vec2(160.0f, 400.0f);
+	addChild(m_pTile);
+
+	m_pTile = new Tile();
+	m_pTile->setWidth((80.0f));
+	m_pTile->setHeight(80.0f);
+	m_pTile->getTransform()->position = glm::vec2(240.0f, 400.0f);
+	addChild(m_pTile);
+
+	m_pTile = new Tile();
+	m_pTile->setWidth((80.0f));
+	m_pTile->setHeight(80.0f);
+	m_pTile->getTransform()->position = glm::vec2(320.0f, 400.0f);
+	addChild(m_pTile);
+
+	m_pTile = new Tile();
+	m_pTile->setWidth((80.0f));
+	m_pTile->setHeight(80.0f);
+	m_pTile->getTransform()->position = glm::vec2(400.0f, 400.0f);
+	addChild(m_pTile);
+
+	m_pTile = new Tile();
+	m_pTile->setWidth((80.0f));
+	m_pTile->setHeight(80.0f);
+	m_pTile->getTransform()->position = glm::vec2(480.0f, 400.0f);
+	addChild(m_pTile);
+
+	m_pTile = new Tile();
+	m_pTile->setWidth((80.0f));
+	m_pTile->setHeight(80.0f);
+	m_pTile->getTransform()->position = glm::vec2(560.0f, 400.0f);
+	addChild(m_pTile);
+
+	m_pTile = new Tile();
+	m_pTile->setWidth((80.0f));
+	m_pTile->setHeight(80.0f);
+	m_pTile->getTransform()->position = glm::vec2(640.0f, 400.0f);
+	addChild(m_pTile);
+
+	m_pTile = new Tile();
+	m_pTile->setWidth((80.0f));
+	m_pTile->setHeight(80.0f);
+	m_pTile->getTransform()->position = glm::vec2(720.0f, 400.0f);
+	addChild(m_pTile);
+
+	//Tile Texture
+	m_pTile = new Tile();
+	m_pTile->setWidth((80.0f));
+	m_pTile->setHeight(80.0f);
+	m_pTile->getTransform()->position = glm::vec2(0.0f, 480.0f);
+	addChild(m_pTile);
+
+	m_pTile = new Tile();
+	m_pTile->setWidth((80.0f));
+	m_pTile->setHeight(80.0f);
+	m_pTile->getTransform()->position = glm::vec2(80.0f, 480.0f);
+	addChild(m_pTile);
+
+	m_pTile = new Tile();
+	m_pTile->setWidth((80.0f));
+	m_pTile->setHeight(80.0f);
+	m_pTile->getTransform()->position = glm::vec2(160.0f, 480.0f);
+	addChild(m_pTile);
+
+	m_pTile = new Tile();
+	m_pTile->setWidth((80.0f));
+	m_pTile->setHeight(80.0f);
+	m_pTile->getTransform()->position = glm::vec2(240.0f, 480.0f);
+	addChild(m_pTile);
+
+	m_pTile = new Tile();
+	m_pTile->setWidth((80.0f));
+	m_pTile->setHeight(80.0f);
+	m_pTile->getTransform()->position = glm::vec2(320.0f, 480.0f);
+	addChild(m_pTile);
+
+	m_pTile = new Tile();
+	m_pTile->setWidth((80.0f));
+	m_pTile->setHeight(80.0f);
+	m_pTile->getTransform()->position = glm::vec2(400.0f, 480.0f);
+	addChild(m_pTile);
+
+	m_pTile = new Tile();
+	m_pTile->setWidth((80.0f));
+	m_pTile->setHeight(80.0f);
+	m_pTile->getTransform()->position = glm::vec2(480.0f, 480.0f);
+	addChild(m_pTile);
+
+	m_pTile = new Tile();
+	m_pTile->setWidth((80.0f));
+	m_pTile->setHeight(80.0f);
+	m_pTile->getTransform()->position = glm::vec2(560.0f, 480.0f);
+	addChild(m_pTile);
+
+	m_pTile = new Tile();
+	m_pTile->setWidth((80.0f));
+	m_pTile->setHeight(80.0f);
+	m_pTile->getTransform()->position = glm::vec2(640.0f, 480.0f);
+	addChild(m_pTile);
+
+	m_pTile = new Tile();
+	m_pTile->setWidth((80.0f));
+	m_pTile->setHeight(80.0f);
+	m_pTile->getTransform()->position = glm::vec2(720.0f, 480.0f);
+	addChild(m_pTile);
+
+	//Tile Texture
+	m_pTile = new Tile();
+	m_pTile->setWidth((80.0f));
+	m_pTile->setHeight(80.0f);
+	m_pTile->getTransform()->position = glm::vec2(0.0f, 560.0f);
+	addChild(m_pTile);
+
+	m_pTile = new Tile();
+	m_pTile->setWidth((80.0f));
+	m_pTile->setHeight(80.0f);
+	m_pTile->getTransform()->position = glm::vec2(80.0f, 560.0f);
+	addChild(m_pTile);
+
+	m_pTile = new Tile();
+	m_pTile->setWidth((80.0f));
+	m_pTile->setHeight(80.0f);
+	m_pTile->getTransform()->position = glm::vec2(160.0f, 560.0f);
+	addChild(m_pTile);
+
+	m_pTile = new Tile();
+	m_pTile->setWidth((80.0f));
+	m_pTile->setHeight(80.0f);
+	m_pTile->getTransform()->position = glm::vec2(240.0f, 560.0f);
+	addChild(m_pTile);
+
+	m_pTile = new Tile();
+	m_pTile->setWidth((80.0f));
+	m_pTile->setHeight(80.0f);
+	m_pTile->getTransform()->position = glm::vec2(320.0f, 560.0f);
+	addChild(m_pTile);
+
+	m_pTile = new Tile();
+	m_pTile->setWidth((80.0f));
+	m_pTile->setHeight(80.0f);
+	m_pTile->getTransform()->position = glm::vec2(400.0f, 560.0f);
+	addChild(m_pTile);
+
+	m_pTile = new Tile();
+	m_pTile->setWidth((80.0f));
+	m_pTile->setHeight(80.0f);
+	m_pTile->getTransform()->position = glm::vec2(480.0f, 560.0f);
+	addChild(m_pTile);
+
+	m_pTile = new Tile();
+	m_pTile->setWidth((80.0f));
+	m_pTile->setHeight(80.0f);
+	m_pTile->getTransform()->position = glm::vec2(560.0f, 560.0f);
+	addChild(m_pTile);
+
+	m_pTile = new Tile();
+	m_pTile->setWidth((80.0f));
+	m_pTile->setHeight(80.0f);
+	m_pTile->getTransform()->position = glm::vec2(640.0f, 560.0f);
+	addChild(m_pTile);
+
+	m_pTile = new Tile();
+	m_pTile->setWidth((80.0f));
+	m_pTile->setHeight(80.0f);
+	m_pTile->getTransform()->position = glm::vec2(720.0f, 560.0f);
+	addChild(m_pTile);
+
+	// Obstacle Texture
+	m_pObstacle = new Obstacle();
+	m_pObstacle->setWidth(80.0f);
+	m_pObstacle->setHeight(80.0f);
+	m_pObstacle->getTransform()->position = glm::vec2(400.0f, 160.0f);
+	addChild(m_pObstacle);
+
+	m_pObstacle = new Obstacle();
+	m_pObstacle->setWidth(80.0f);
+	m_pObstacle->setHeight(80.0f);
+	m_pObstacle->getTransform()->position = glm::vec2(480.0f, 160.0f);
+	addChild(m_pObstacle);
+
 	// Plane Sprite
 	m_pPlaneSprite = new Plane();
 	m_pPlaneSprite->getTransform()->position = m_pPatrolPath[0]->getTransform()->position;
@@ -415,11 +918,6 @@ void PlayScene::start()
 	m_pPlayer->getTransform()->position = glm::vec2(600.0f, 440.0f);
 	addChild(m_pPlayer);
 	m_playerFacingRight = true;
-
-	// Obstacle Texture
-	m_pObstacle = new Obstacle();
-	addChild(m_pObstacle);
-
 }
 
 

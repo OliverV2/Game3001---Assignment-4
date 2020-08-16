@@ -12,6 +12,7 @@ enum GameObjectType {
 	BACK_BUTTON,
 	NEXT_BUTTON,
 	OBSTACLE,
+	TILE,
 	PATH_NODE,
 	NUM_OF_TYPES
 };

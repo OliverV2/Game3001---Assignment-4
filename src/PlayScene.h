@@ -48,6 +48,8 @@ private:
 
 	Obstacle* m_pObstacle;
 
+	Tile* m_pTile;
+
 
 	bool m_bDebugMode;
 	bool m_bPatrolMode;

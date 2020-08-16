@@ -18,6 +18,17 @@ private:
 	
 };
 
+class Tile : public DisplayObject
+{
+public:
+	Tile();
+	~Tile();
+
+	virtual void draw() override;
+	virtual void update() override;
+	virtual void clean() override;
+};
+
 
 
 
