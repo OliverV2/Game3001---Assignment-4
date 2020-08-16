@@ -1,0 +1,354 @@
+﻿  Button.cpp
+C:\Users\olive\source\repos\Game3001---Assignment-4\src\Button.cpp(22,15): warning C4244: 'argument': conversion from 'const T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\olive\source\repos\Game3001---Assignment-4\src\Button.cpp(23,16): warning C4244: 'argument': conversion from 'const T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\olive\source\repos\Game3001---Assignment-4\src\Button.cpp(38,46): warning C4244: 'argument': conversion from 'const T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\olive\source\repos\Game3001---Assignment-4\src\Button.cpp(38,43): warning C4244: 'argument': conversion from 'const T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+  PlayScene.cpp
+C:\Users\olive\source\repos\Game3001---Assignment-4\src\PlayScene.cpp(375,30): warning C4018: '>': signed/unsigned mismatch
+  main.cpp
+C:\Users\olive\source\repos\Game3001---Assignment-4\src\main.cpp(9,32): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+  ship.cpp
+C:\Users\olive\source\repos\Game3001---Assignment-4\src\ship.cpp(12,15): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\olive\source\repos\Game3001---Assignment-4\src\ship.cpp(13,16): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\olive\source\repos\Game3001---Assignment-4\src\ship.cpp(37,46): warning C4244: 'argument': conversion from 'const T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\olive\source\repos\Game3001---Assignment-4\src\ship.cpp(37,43): warning C4244: 'argument': conversion from 'const T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\olive\source\repos\Game3001---Assignment-4\src\ship.cpp(149,35): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\olive\source\repos\Game3001---Assignment-4\src\ship.cpp(149,22): warning C4244: 'initializing': conversion from 'float' to 'const int', possible loss of data
+  Util.cpp
+C:\Users\olive\source\repos\Game3001---Assignment-4\src\Util.cpp(238,15): warning C4244: '=': conversion from 'double' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\olive\source\repos\Game3001---Assignment-4\src\Util.cpp(239,15): warning C4244: '=': conversion from 'double' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\olive\source\repos\Game3001---Assignment-4\src\Util.cpp(255,16): warning C4244: '=': conversion from 'double' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\olive\source\repos\Game3001---Assignment-4\src\Util.cpp(287,8): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\olive\source\repos\Game3001---Assignment-4\src\Util.cpp(288,8): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\olive\source\repos\Game3001---Assignment-4\src\Util.cpp(289,8): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\olive\source\repos\Game3001---Assignment-4\src\Util.cpp(290,8): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\olive\source\repos\Game3001---Assignment-4\src\Util.cpp(295,59): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\olive\source\repos\Game3001---Assignment-4\src\Util.cpp(295,52): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\olive\source\repos\Game3001---Assignment-4\src\Util.cpp(295,45): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\olive\source\repos\Game3001---Assignment-4\src\Util.cpp(295,36): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\olive\source\repos\Game3001---Assignment-4\src\Util.cpp(301,8): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\olive\source\repos\Game3001---Assignment-4\src\Util.cpp(302,8): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\olive\source\repos\Game3001---Assignment-4\src\Util.cpp(303,8): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\olive\source\repos\Game3001---Assignment-4\src\Util.cpp(304,8): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\olive\source\repos\Game3001---Assignment-4\src\Util.cpp(307,24): warning C4244: '=': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\olive\source\repos\Game3001---Assignment-4\src\Util.cpp(308,24): warning C4244: '=': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\olive\source\repos\Game3001---Assignment-4\src\Util.cpp(321,8): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\olive\source\repos\Game3001---Assignment-4\src\Util.cpp(322,8): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\olive\source\repos\Game3001---Assignment-4\src\Util.cpp(323,8): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\olive\source\repos\Game3001---Assignment-4\src\Util.cpp(324,8): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\olive\source\repos\Game3001---Assignment-4\src\Util.cpp(329,15): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\olive\source\repos\Game3001---Assignment-4\src\Util.cpp(343,57): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\olive\source\repos\Game3001---Assignment-4\src\Util.cpp(343,43): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\olive\source\repos\Game3001---Assignment-4\src\Util.cpp(344,57): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\olive\source\repos\Game3001---Assignment-4\src\Util.cpp(344,43): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\olive\source\repos\Game3001---Assignment-4\src\Util.cpp(345,57): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\olive\source\repos\Game3001---Assignment-4\src\Util.cpp(345,43): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\olive\source\repos\Game3001---Assignment-4\src\Util.cpp(346,57): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\olive\source\repos\Game3001---Assignment-4\src\Util.cpp(346,43): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\olive\source\repos\Game3001---Assignment-4\src\Util.cpp(350,57): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\olive\source\repos\Game3001---Assignment-4\src\Util.cpp(350,43): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\olive\source\repos\Game3001---Assignment-4\src\Util.cpp(351,57): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\olive\source\repos\Game3001---Assignment-4\src\Util.cpp(351,43): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\olive\source\repos\Game3001---Assignment-4\src\Util.cpp(352,57): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\olive\source\repos\Game3001---Assignment-4\src\Util.cpp(352,43): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\olive\source\repos\Game3001---Assignment-4\src\Util.cpp(353,57): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\olive\source\repos\Game3001---Assignment-4\src\Util.cpp(353,43): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\olive\source\repos\Game3001---Assignment-4\src\Util.cpp(357,57): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\olive\source\repos\Game3001---Assignment-4\src\Util.cpp(357,43): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\olive\source\repos\Game3001---Assignment-4\src\Util.cpp(358,57): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\olive\source\repos\Game3001---Assignment-4\src\Util.cpp(358,43): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\olive\source\repos\Game3001---Assignment-4\src\Util.cpp(359,57): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\olive\source\repos\Game3001---Assignment-4\src\Util.cpp(359,43): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\olive\source\repos\Game3001---Assignment-4\src\Util.cpp(360,57): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\olive\source\repos\Game3001---Assignment-4\src\Util.cpp(360,43): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\olive\source\repos\Game3001---Assignment-4\src\Util.cpp(364,57): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\olive\source\repos\Game3001---Assignment-4\src\Util.cpp(364,43): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\olive\source\repos\Game3001---Assignment-4\src\Util.cpp(365,57): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\olive\source\repos\Game3001---Assignment-4\src\Util.cpp(365,43): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\olive\source\repos\Game3001---Assignment-4\src\Util.cpp(366,57): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\olive\source\repos\Game3001---Assignment-4\src\Util.cpp(366,43): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\olive\source\repos\Game3001---Assignment-4\src\Util.cpp(367,57): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\olive\source\repos\Game3001---Assignment-4\src\Util.cpp(367,43): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\olive\source\repos\Game3001---Assignment-4\src\Util.cpp(371,57): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\olive\source\repos\Game3001---Assignment-4\src\Util.cpp(371,43): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\olive\source\repos\Game3001---Assignment-4\src\Util.cpp(372,57): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\olive\source\repos\Game3001---Assignment-4\src\Util.cpp(372,43): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\olive\source\repos\Game3001---Assignment-4\src\Util.cpp(373,57): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\olive\source\repos\Game3001---Assignment-4\src\Util.cpp(373,43): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\olive\source\repos\Game3001---Assignment-4\src\Util.cpp(374,57): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\olive\source\repos\Game3001---Assignment-4\src\Util.cpp(374,43): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\olive\source\repos\Game3001---Assignment-4\src\Util.cpp(375,57): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\olive\source\repos\Game3001---Assignment-4\src\Util.cpp(375,43): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\olive\source\repos\Game3001---Assignment-4\src\Util.cpp(376,57): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\olive\source\repos\Game3001---Assignment-4\src\Util.cpp(376,43): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\olive\source\repos\Game3001---Assignment-4\src\Util.cpp(377,57): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\olive\source\repos\Game3001---Assignment-4\src\Util.cpp(377,43): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\olive\source\repos\Game3001---Assignment-4\src\Util.cpp(378,57): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\olive\source\repos\Game3001---Assignment-4\src\Util.cpp(378,43): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\olive\source\repos\Game3001---Assignment-4\src\Util.cpp(405,16): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\olive\source\repos\Game3001---Assignment-4\src\Util.cpp(406,17): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\olive\source\repos\Game3001---Assignment-4\src\Util.cpp(411,23): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\olive\source\repos\Game3001---Assignment-4\src\Util.cpp(421,22): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\olive\source\repos\Game3001---Assignment-4\src\Util.cpp(430,19): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+  Generating Code...
+  Template.vcxproj -> C:\Users\olive\source\repos\Game3001---Assignment-4\bin\Debug\Template.exe
