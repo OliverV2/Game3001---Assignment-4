@@ -22,12 +22,15 @@ void PlayScene::draw()
 		auto LOSColour = (!m_bPlayerHasLOS) ? glm::vec4(1.0f, 0.0f, 0.0f, 1.0f) : glm::vec4(0.0f, 1.0f, 0.0f, 1.0f);
 
 		Util::DrawLine(m_pPlayer->getTransform()->position, m_pPlaneSprite->getTransform()->position, LOSColour);
+		Util::DrawLine(m_pPlayer->getTransform()->position, m_pPlaneSprite2->getTransform()->position, LOSColour);
 
 		Util::DrawRect(m_pPlayer->getTransform()->position - glm::vec2(m_pPlayer->getWidth() * 0.5f, m_pPlayer->getHeight() *0.5f),
 			m_pPlayer->getWidth(), m_pPlayer->getHeight());
 
 		Util::DrawRect(m_pPlaneSprite->getTransform()->position - glm::vec2(m_pPlaneSprite->getWidth() * 0.5f, m_pPlaneSprite->getHeight() * 0.5f),
 			m_pPlaneSprite->getWidth(), m_pPlaneSprite->getHeight());
+		Util::DrawRect(m_pPlaneSprite2->getTransform()->position - glm::vec2(m_pPlaneSprite2->getWidth() * 0.5f, m_pPlaneSprite2->getHeight() * 0.5f),
+			m_pPlaneSprite2->getWidth(), m_pPlaneSprite2->getHeight());
 
 		/*Util::DrawRect(m_pObstacle->getTransform()->position - glm::vec2(m_pObstacle->getWidth() * 0.5f, m_pObstacle->getHeight() * 0.5f),
 			m_pObstacle->getWidth(), m_pObstacle->getHeight());*/
@@ -44,10 +47,11 @@ void PlayScene::update()
 	updateDisplayList();
 
 	m_bPlayerHasLOS = CollisionManager::LOSCheck(m_pPlayer, m_pPlaneSprite, m_pObstacle);
-
+	m_bPlayerHasLOS = CollisionManager::LOSCheck(m_pPlayer, m_pPlaneSprite2, m_pObstacle);
 	CollisionManager::AABBCheck(m_pPlayer, m_pPlaneSprite);
-
+	CollisionManager::AABBCheck(m_pPlayer, m_pPlaneSprite2);
 	CollisionManager::AABBCheck(m_pPlayer, m_pObstacle);
+	
 
 	m_setGridLOS();
 
@@ -75,7 +79,7 @@ void PlayScene::handleEvents()
 			{
 				m_pPlayer->setAnimationState(PLAYER_RUN_RIGHT);
 				m_playerFacingRight = true;
-
+				SoundManager::Instance().playSound("steps", 0, 1);
 				m_pPlayer->getRigidBody()->velocity = glm::vec2(5.0f, 0.0f);
 				m_pPlayer->getTransform()->position += m_pPlayer->getRigidBody()->velocity;
 				m_pPlayer->getRigidBody()->velocity *= m_pPlayer->getRigidBody()->velocity * 0.9f;
@@ -84,7 +88,7 @@ void PlayScene::handleEvents()
 			{
 				m_pPlayer->setAnimationState(PLAYER_RUN_LEFT);
 				m_playerFacingRight = false;
-
+				SoundManager::Instance().playSound("steps", 0, 1);
 				m_pPlayer->getRigidBody()->velocity = glm::vec2(-5.0f, 0.0f);
 				m_pPlayer->getTransform()->position += m_pPlayer->getRigidBody()->velocity;
 				m_pPlayer->getRigidBody()->velocity *= m_pPlayer->getRigidBody()->velocity * 0.9f;
@@ -114,6 +118,8 @@ void PlayScene::handleEvents()
 
 			SoundManager::Instance().playSound("steps", 0, 1);
 
+
+
 			m_pPlayer->getRigidBody()->velocity = glm::vec2(-5.0f, 0.0f);
 			m_pPlayer->getTransform()->position += m_pPlayer->getRigidBody()->velocity;
 			m_pPlayer->getRigidBody()->velocity *= m_pPlayer->getRigidBody()->velocity * 0.9f;
@@ -133,7 +139,7 @@ void PlayScene::handleEvents()
 		{
 			m_pPlayer->setAnimationState(PLAYER_RUN_LEFT);
 
-
+			SoundManager::Instance().playSound("steps", 0, 1);
 			m_pPlayer->getRigidBody()->velocity = glm::vec2(0.0f, -5.0f);
 			m_pPlayer->getTransform()->position += m_pPlayer->getRigidBody()->velocity;
 			m_pPlayer->getRigidBody()->velocity *= m_pPlayer->getRigidBody()->velocity * 0.9f;
@@ -143,7 +149,7 @@ void PlayScene::handleEvents()
 		{
 			m_pPlayer->setAnimationState(PLAYER_RUN_LEFT);
 
-
+			SoundManager::Instance().playSound("steps", 0, 1);
 			m_pPlayer->getRigidBody()->velocity = glm::vec2(0.0f, 5.0f);
 			m_pPlayer->getTransform()->position += m_pPlayer->getRigidBody()->velocity;
 			m_pPlayer->getRigidBody()->velocity *= m_pPlayer->getRigidBody()->velocity * 0.9f;
@@ -346,33 +352,72 @@ void PlayScene::m_movePlaneToTargetNode()
 	{
 		m_pTargetPathNode = m_pPatrolPath[m_targetPathNodeIndex];
 		auto targetVector = Util::normalize(m_pTargetPathNode->getTransform()->position - m_pPlaneSprite->getTransform()->position);
+		auto targetVector2 = Util::normalize(m_pTargetPathNode->getTransform()->position - m_pPlaneSprite2->getTransform()->position);
 
 		if (targetVector.x == 1)
 		{
 			m_pPlaneSprite->setAngle(90.0f);
+			
 		}
 
 		else if (targetVector.x == -1)
 		{
 			m_pPlaneSprite->setAngle(-90.0f);
+			
 		}
 
 		if (targetVector.y == 1)
 		{
 			m_pPlaneSprite->setAngle(180.0f);
+			
 		}
 
 		else if (targetVector.y == -1)
 		{
 			m_pPlaneSprite->setAngle(0.0f);
+		
+		}
+		if (targetVector2.x == 1)
+		{
+			
+			m_pPlaneSprite2->setAngle(90.0f);
 		}
 
+		else if (targetVector2.x == -1)
+		{
+		
+			m_pPlaneSprite2->setAngle(-90.0f);
+		}
+
+		if (targetVector2.y == 1)
+		{
+			
+			m_pPlaneSprite2->setAngle(180.0f);
+		}
+
+		else if (targetVector2.y == -1)
+		{
+			
+			m_pPlaneSprite2->setAngle(0.0f);
+		}
+
+
 		m_pPlaneSprite->getRigidBody()->velocity = targetVector;
+		m_pPlaneSprite2->getRigidBody()->velocity = targetVector2;
 		m_pPlaneSprite->getTransform()->position += m_pPlaneSprite->getRigidBody()->velocity * m_pPlaneSprite->getRigidBody()->maxSpeed;
+		m_pPlaneSprite2->getTransform()->position += m_pPlaneSprite2->getRigidBody()->velocity * m_pPlaneSprite2->getRigidBody()->maxSpeed;
 		if (m_pPlaneSprite->getTransform()->position == m_pTargetPathNode->getTransform()->position)
 		{
 			m_targetPathNodeIndex++;
 			if (m_targetPathNodeIndex > m_pPatrolPath.size() -1)
+			{
+				m_targetPathNodeIndex = 0;
+			}
+		}
+		if (m_pPlaneSprite2->getTransform()->position == m_pTargetPathNode->getTransform()->position)
+		{
+			m_targetPathNodeIndex++;
+			if (m_targetPathNodeIndex > m_pPatrolPath.size() - 1)
 			{
 				m_targetPathNodeIndex = 0;
 			}
@@ -912,6 +957,12 @@ void PlayScene::start()
 	m_pPlaneSprite->getTransform()->position = m_pPatrolPath[0]->getTransform()->position;
 	m_pPlaneSprite->getRigidBody()->maxSpeed = 5.0f;
 	addChild(m_pPlaneSprite);
+
+	m_pPlaneSprite2 = new Plane();
+	m_pPlaneSprite2->getTransform()->position = m_pPatrolPath[0]->getTransform()->position;
+	m_pPlaneSprite2->getRigidBody()->maxSpeed = 2.0f;
+	addChild(m_pPlaneSprite2);
+
 
 	// Player Sprite
 	m_pPlayer = new Player();

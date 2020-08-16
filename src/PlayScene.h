@@ -42,6 +42,7 @@ private:
 	glm::vec2 m_mousePosition;
 
 	Plane* m_pPlaneSprite;
+	Plane* m_pPlaneSprite2;
 	Player* m_pPlayer;
 	bool m_playerFacingRight;
 	bool m_bPlayerHasLOS;

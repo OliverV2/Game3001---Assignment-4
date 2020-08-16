@@ -62,6 +62,7 @@ void Player::draw()
 
 void Player::update()
 {
+
 }
 
 void Player::clean()
