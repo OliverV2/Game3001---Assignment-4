@@ -229,7 +229,7 @@ bool CollisionManager::LOSCheck(DisplayObject* from, DisplayObject* to, DisplayO
 	const int halfBoxWidth2 = boxWidth2 * 0.5f;
 	const auto boxHeight2 = obstacle2->getHeight();
 	const int halfBoxHeight2 = boxHeight2 * 0.5f;
-	const auto boxStar2t = obstacle2->getTransform()->position - glm::vec2(halfBoxWidth2, halfBoxHeight2);
+	const auto boxStart2 = obstacle2->getTransform()->position - glm::vec2(halfBoxWidth2, halfBoxHeight2);
 	//
 	const auto boxWidth3 = obstacle3->getWidth();
 	const int halfBoxWidth3 = boxWidth3 * 0.5f;
@@ -241,6 +241,24 @@ bool CollisionManager::LOSCheck(DisplayObject* from, DisplayObject* to, DisplayO
 	{
 		//std::cout << "No LOS - Collision with Obstacle!" << std::endl;
 		
+		return false;
+	}
+	if (lineRectCheck(lineStart, lineEnd, boxStart1, boxWidth1, boxHeight1))
+	{
+		//std::cout << "No LOS - Collision with Obstacle!" << std::endl;
+
+		return false;
+	}
+	if (lineRectCheck(lineStart, lineEnd, boxStart2, boxWidth2, boxHeight2))
+	{
+		//std::cout << "No LOS - Collision with Obstacle!" << std::endl;
+
+		return false;
+	}
+	if (lineRectCheck(lineStart, lineEnd, boxStart3, boxWidth3, boxHeight3))
+	{
+		//std::cout << "No LOS - Collision with Obstacle!" << std::endl;
+
 		return false;
 	}
 
