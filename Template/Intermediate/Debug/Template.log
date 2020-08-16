@@ -1,29 +1,4 @@
-﻿  EndScene.cpp
-  EventManager.cpp
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\EventManager.cpp(76,29): warning C4018: '<': signed/unsigned mismatch
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\EventManager.cpp(133,37): warning C4244: '=': conversion from 'Sint32' to 'T', possible loss of data
-          with
-          [
-              T=float
-          ]
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\EventManager.cpp(134,37): warning C4244: '=': conversion from 'Sint32' to 'T', possible loss of data
-          with
-          [
-              T=float
-          ]
-  Game.cpp
-  Plane.cpp
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\Plane.cpp(39,44): warning C4244: 'argument': conversion from 'const T' to 'int', possible loss of data
-          with
-          [
-              T=float
-          ]
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\Plane.cpp(39,41): warning C4244: 'argument': conversion from 'const T' to 'int', possible loss of data
-          with
-          [
-              T=float
-          ]
-  PlayScene.cpp
+﻿  PlayScene.cpp
 C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(415,30): warning C4018: '>': signed/unsigned mismatch
 C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(423,30): warning C4018: '>': signed/unsigned mismatch
 C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(457,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
@@ -190,63 +165,4 @@ C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(948,24): 
 C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(949,25): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
 C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(954,24): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
 C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(955,25): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-  StartScene.cpp
-  TextureManager.cpp
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\TextureManager.cpp(137,36): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\TextureManager.cpp(137,21): warning C4244: 'initializing': conversion from 'double' to 'const int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\TextureManager.cpp(138,37): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\TextureManager.cpp(138,21): warning C4244: 'initializing': conversion from 'double' to 'const int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\TextureManager.cpp(180,36): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\TextureManager.cpp(180,21): warning C4244: 'initializing': conversion from 'double' to 'const int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\TextureManager.cpp(181,37): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\TextureManager.cpp(181,21): warning C4244: 'initializing': conversion from 'double' to 'const int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\TextureManager.cpp(197,34): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\TextureManager.cpp(197,26): warning C4244: 'initializing': conversion from 'float' to 'const int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\TextureManager.cpp(225,33): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\TextureManager.cpp(225,26): warning C4244: 'initializing': conversion from 'float' to 'const int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\TextureManager.cpp(232,32): warning C4018: '>': signed/unsigned mismatch
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\TextureManager.cpp(260,36): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\TextureManager.cpp(260,21): warning C4244: 'initializing': conversion from 'double' to 'const int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\TextureManager.cpp(261,37): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\TextureManager.cpp(261,21): warning C4244: 'initializing': conversion from 'double' to 'const int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\TextureManager.cpp(290,36): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\TextureManager.cpp(290,21): warning C4244: 'initializing': conversion from 'double' to 'const int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\TextureManager.cpp(291,37): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\TextureManager.cpp(291,21): warning C4244: 'initializing': conversion from 'double' to 'const int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\TextureManager.cpp(310,11): warning C4244: '=': conversion from 'int' to 'T', possible loss of data
-          with
-          [
-              T=float
-          ]
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\TextureManager.cpp(311,11): warning C4244: '=': conversion from 'int' to 'T', possible loss of data
-          with
-          [
-              T=float
-          ]
-  main.cpp
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\main.cpp(9,32): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-  ship.cpp
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\ship.cpp(12,15): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
-          with
-          [
-              T=float
-          ]
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\ship.cpp(13,16): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
-          with
-          [
-              T=float
-          ]
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\ship.cpp(37,46): warning C4244: 'argument': conversion from 'const T' to 'int', possible loss of data
-          with
-          [
-              T=float
-          ]
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\ship.cpp(37,43): warning C4244: 'argument': conversion from 'const T' to 'int', possible loss of data
-          with
-          [
-              T=float
-          ]
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\ship.cpp(149,35): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\ship.cpp(149,22): warning C4244: 'initializing': conversion from 'float' to 'const int', possible loss of data
-  Generating Code...
   Template.vcxproj -> C:\Users\deepa\source\repos\Game3001---Assignment-42\bin\Debug\Template.exe
