@@ -46,6 +46,7 @@ private:
 	Player* m_pPlayer;
 	bool m_playerFacingRight;
 	bool m_bPlayerHasLOS;
+	bool m_bEnemyHasLOS;
 
 	Obstacle* m_pObstacle;
 

@@ -48,6 +48,9 @@ void PlayScene::update()
 
 	m_bPlayerHasLOS = CollisionManager::LOSCheck(m_pPlayer, m_pPlaneSprite, m_pObstacle);
 	m_bPlayerHasLOS = CollisionManager::LOSCheck(m_pPlayer, m_pPlaneSprite2, m_pObstacle);
+	m_bPlayerHasLOS = CollisionManager::LOSCheck(m_pPlaneSprite, m_pPlayer, m_pObstacle);
+	m_bPlayerHasLOS = CollisionManager::LOSCheck(m_pPlaneSprite2, m_pPlayer, m_pObstacle);
+	
 	CollisionManager::AABBCheck(m_pPlayer, m_pPlaneSprite);
 	CollisionManager::AABBCheck(m_pPlayer, m_pPlaneSprite2);
 	CollisionManager::AABBCheck(m_pPlayer, m_pObstacle);
@@ -429,6 +432,7 @@ void PlayScene::m_movePlaneToTargetNode()
 void PlayScene::start()
 {
 	m_bPlayerHasLOS = false;
+	m_bEnemyHasLOS = false;
 
 	SoundManager::Instance().allocateChannels(16);
 	SoundManager::Instance().setMusicVolume(40);
