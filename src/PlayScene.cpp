@@ -17,6 +17,12 @@ void PlayScene::draw()
 	
 	drawDisplayList();
 
+	auto HealthBarColour = glm::vec4(0.0f, 1.0f, 0.0f, 1.0f);
+
+	Util::DrawLine(m_pPlaneSprite->getTransform()->position + glm::vec2(15.0f, 30.0f), m_pPlaneSprite->getTransform()->position + glm::vec2(-15.0f, 30.0f), HealthBarColour);
+	Util::DrawLine(m_pPlaneSprite2->getTransform()->position + glm::vec2(15.0f, 30.0f), m_pPlaneSprite2->getTransform()->position + glm::vec2(-15.0f, 30.0f), HealthBarColour);
+
+
 	if(m_bDebugMode)
 	{
 		auto LOSColour = (!m_bPlayerHasLOS) ? glm::vec4(1.0f, 0.0f, 0.0f, 1.0f) : glm::vec4(0.0f, 1.0f, 0.0f, 1.0f);
@@ -55,7 +61,7 @@ void PlayScene::update()
 	CollisionManager::AABBCheck(m_pPlayer, m_pPlaneSprite);
 	CollisionManager::AABBCheck(m_pPlayer, m_pPlaneSprite2);
 	CollisionManager::AABBCheck(m_pPlayer, m_pObstacle);
-	
+
 
 	m_setGridLOS();
 

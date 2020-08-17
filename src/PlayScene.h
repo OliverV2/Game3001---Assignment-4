@@ -13,7 +13,7 @@
 #include "PathNode.h"
 #include "GameObject.h"
 #include "Button.h"
-
+#include "Util.h"
 
 
 class PlayScene : public Scene
@@ -57,7 +57,7 @@ private:
 
 	Tile* m_pTile;
 
-
+	
 	bool m_bDebugMode;
 	bool m_bPatrolMode;
 
