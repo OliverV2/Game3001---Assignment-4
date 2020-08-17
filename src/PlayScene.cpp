@@ -51,7 +51,7 @@ void PlayScene::update()
 	m_bEnemyHasLOS = CollisionManager::LOSCheck(m_pPlaneSprite, m_pPlayer, m_pObstacle);
 	m_bEnemyHasLOS1 = CollisionManager::LOSCheck(m_pPlaneSprite2, m_pPlayer, m_pObstacle);
     m_bdetection = CollisionManager::circleAABBCheck(m_pPlaneSprite, m_pPlayer);
-	m_bdetection2= CollisionManager::circleAABBCheck(m_pPlaneSprite2, m_pPlayer);
+	m_bdetection2 = CollisionManager::circleAABBCheck(m_pPlaneSprite2, m_pPlayer);
 	CollisionManager::AABBCheck(m_pPlayer, m_pPlaneSprite);
 	CollisionManager::AABBCheck(m_pPlayer, m_pPlaneSprite2);
 	CollisionManager::AABBCheck(m_pPlayer, m_pObstacle);
@@ -61,6 +61,9 @@ void PlayScene::update()
 
 
 	m_movePlaneToTargetNode();
+	cover();
+	m_bflee();
+	
 }
 
 void PlayScene::clean()
@@ -205,7 +208,21 @@ void PlayScene::handleEvents()
 		if (EventManager::Instance().isKeyDown(SDL_SCANCODE_K))
 		{
 			std::cout << "DEBUG: Enemies taking damage!" << std::endl;
-
+			Plane1hlth = Plane1hlth - 10;
+			Plane2hlth = Plane2hlth - 10;
+			if (Plane1hlth <= 25)
+			{
+				fleenow1 = true;
+				std::cout << "fleeing away plane 1 \n ";
+			}
+			
+			if (Plane2hlth <= 25)
+			{
+				fleenow2 = true;
+				std::cout << "fleeing away plane 2 \n ";
+			}
+		
+			is_hit = true;
 			m_bDebugKeys[K_KEY] = true;
 		}
 	}
@@ -349,14 +366,33 @@ void PlayScene::m_displayPatrolPath()
 		std::cout << "(" << node->getTransform()->position.x << "," << node->getTransform()->position.y << ")" << std::endl;
 	}
 }
+void PlayScene::m_bflee()
+{
+	if (fleenow1)
+	{
+		m_targetPathNodeIndex = 0;
+	}
+	if (fleenow2)
+	{
+		m_targetPathNodeIndex1 = 0;
+	}
+}
+void PlayScene::cover()
+{
+	if(is_hit)
+	m_targetPathNodeIndex1 = 5;
+}
+
+
 
 void PlayScene::m_movePlaneToTargetNode()
 {
 	if (m_bPatrolMode)
 	{
 		m_pTargetPathNode = m_pPatrolPath[m_targetPathNodeIndex];
+		m_pTargetPathNode1 = m_pPatrolPath[m_targetPathNodeIndex1];
 		auto targetVector = Util::normalize(m_pTargetPathNode->getTransform()->position - m_pPlaneSprite->getTransform()->position);
-		auto targetVector2 = Util::normalize(m_pTargetPathNode->getTransform()->position - m_pPlaneSprite2->getTransform()->position);
+		auto targetVector2 = Util::normalize(m_pTargetPathNode1->getTransform()->position - m_pPlaneSprite2->getTransform()->position);
 
 		if (targetVector.x == 1)
 		{
@@ -418,12 +454,12 @@ void PlayScene::m_movePlaneToTargetNode()
 				m_targetPathNodeIndex = 0;
 			}
 		}
-		if (m_pPlaneSprite2->getTransform()->position == m_pTargetPathNode->getTransform()->position)
+		if (m_pPlaneSprite2->getTransform()->position == m_pTargetPathNode1->getTransform()->position)
 		{
-			m_targetPathNodeIndex++;
-			if (m_targetPathNodeIndex > m_pPatrolPath.size() - 1)
+			m_targetPathNodeIndex1++;
+			if (m_targetPathNodeIndex1 > m_pPatrolPath.size() - 1)
 			{
-				m_targetPathNodeIndex = 0;
+				m_targetPathNodeIndex1 = 0;
 			}
 		}
 	}
@@ -432,9 +468,14 @@ void PlayScene::m_movePlaneToTargetNode()
 
 void PlayScene::start()
 {
+	Plane1hlth = Plane2hlth = 100;
 	m_bPlayerHasLOS = false;
 	m_bEnemyHasLOS = false;
-
+	m_bdetection2 = false;
+	m_bdetection = false;
+	fleenow1= false;
+	fleenow2 = false;
+	is_hit = false;
 	SoundManager::Instance().allocateChannels(16);
 	SoundManager::Instance().setMusicVolume(40);
 	SoundManager::Instance().setSoundVolume(40);
@@ -449,7 +490,7 @@ void PlayScene::start()
 	m_buildClockwisePatrolPath();
 	/*m_displayPatrolPath();*/
 	m_targetPathNodeIndex = 1;
-	
+	m_targetPathNodeIndex = 1;
 	
 	m_bDebugMode = false;
 	m_bPatrolMode = false;

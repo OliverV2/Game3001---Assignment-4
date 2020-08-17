@@ -51,7 +51,8 @@ private:
 	bool m_bEnemyHasLOS1;
 	bool m_bdetection;
 	bool m_bdetection2;
-
+	bool fleenow1;
+	bool fleenow2;
 	Obstacle* m_pObstacle;
 
 	Tile* m_pTile;
@@ -61,6 +62,7 @@ private:
 	bool m_bPatrolMode;
 
 	bool m_bDebugKeys[NUM_OF_DEBUG_KEYS];
+	bool is_hit;
 
 	std::vector<PathNode*> m_pGrid;
 
@@ -69,7 +71,12 @@ private:
 	void m_buildClockwisePatrolPath();
 	void m_displayPatrolPath();
 	int m_targetPathNodeIndex;
+	int m_targetPathNodeIndex1;
+	int Plane1hlth, Plane2hlth;
+	void m_bflee();
+	void cover();
 	PathNode* m_pTargetPathNode;
+	PathNode* m_pTargetPathNode1;
 	void m_movePlaneToTargetNode();
 	
 	
