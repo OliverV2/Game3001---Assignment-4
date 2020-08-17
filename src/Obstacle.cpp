@@ -11,7 +11,7 @@ Obstacle::Obstacle()
 	setHeight(size.y);
 	getTransform()->position = glm::vec2(300.0f, 400.0f);
 	getRigidBody()->velocity = glm::vec2(0, 0);
-	getRigidBody()->isColliding = false;
+	getRigidBody()->isColliding = true;
 
 	setType(OBSTACLE);
 }
@@ -71,4 +71,5 @@ void Tile::update()
 void Tile::clean()
 {
 }
+
 

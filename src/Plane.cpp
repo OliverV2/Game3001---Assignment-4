@@ -41,6 +41,7 @@ void Plane::draw()
 
 void Plane::update()
 {
+
 }
 
 void Plane::clean()

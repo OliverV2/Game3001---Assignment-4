@@ -17,31 +17,29 @@ void PlayScene::draw()
 	
 	drawDisplayList();
 
+	auto HealthBarColour = glm::vec4(0.0f, 1.0f, 0.0f, 1.0f);
+
+	Util::DrawLine(m_pPlaneSprite->getTransform()->position + glm::vec2(15.0f, 30.0f), m_pPlaneSprite->getTransform()->position + glm::vec2(-15.0f, 30.0f), HealthBarColour);
+	Util::DrawLine(m_pPlaneSprite2->getTransform()->position + glm::vec2(15.0f, 30.0f), m_pPlaneSprite2->getTransform()->position + glm::vec2(-15.0f, 30.0f), HealthBarColour);
+
+
 	if(m_bDebugMode)
 	{
-		auto LOSColour = (!m_bPlayerHasLOS || !m_bPlayerHasLOS1 || !m_bPlayerHasLOS2 || !m_bPlayerHasLOS3) ? glm::vec4(1.0f, 0.0f, 0.0f, 1.0f) : glm::vec4(0.0f, 1.0f, 0.0f, 1.0f);
-		
-		
+		auto LOSColour = (!m_bPlayerHasLOS) ? glm::vec4(1.0f, 0.0f, 0.0f, 1.0f) : glm::vec4(0.0f, 1.0f, 0.0f, 1.0f);
 
 		Util::DrawLine(m_pPlayer->getTransform()->position, m_pPlaneSprite->getTransform()->position, LOSColour);
+		Util::DrawLine(m_pPlayer->getTransform()->position, m_pPlaneSprite2->getTransform()->position, LOSColour);
 
 		Util::DrawRect(m_pPlayer->getTransform()->position - glm::vec2(m_pPlayer->getWidth() * 0.5f, m_pPlayer->getHeight() *0.5f),
 			m_pPlayer->getWidth(), m_pPlayer->getHeight());
 
 		Util::DrawRect(m_pPlaneSprite->getTransform()->position - glm::vec2(m_pPlaneSprite->getWidth() * 0.5f, m_pPlaneSprite->getHeight() * 0.5f),
 			m_pPlaneSprite->getWidth(), m_pPlaneSprite->getHeight());
+		Util::DrawRect(m_pPlaneSprite2->getTransform()->position - glm::vec2(m_pPlaneSprite2->getWidth() * 0.5f, m_pPlaneSprite2->getHeight() * 0.5f),
+			m_pPlaneSprite2->getWidth(), m_pPlaneSprite2->getHeight());
 
-		Util::DrawRect(m_pObstacle->getTransform()->position - glm::vec2(m_pObstacle->getWidth(), m_pObstacle->getHeight()),
-			m_pObstacle->getWidth(), m_pObstacle->getHeight());
-
-		Util::DrawRect(m_pObstacle1->getTransform()->position - glm::vec2(m_pObstacle1->getWidth() , m_pObstacle1->getHeight() ),
-			m_pObstacle1->getWidth(), m_pObstacle1->getHeight());
-
-		Util::DrawRect(m_pObstacle2->getTransform()->position - glm::vec2(m_pObstacle2->getWidth(), m_pObstacle2->getHeight()),
-			m_pObstacle2->getWidth(), m_pObstacle2->getHeight());
-
-		Util::DrawRect(m_pObstacle3->getTransform()->position - glm::vec2(m_pObstacle3->getWidth(), m_pObstacle3->getHeight()),
-			m_pObstacle3->getWidth(), m_pObstacle3->getHeight());
+		/*Util::DrawRect(m_pObstacle->getTransform()->position - glm::vec2(m_pObstacle->getWidth() * 0.5f, m_pObstacle->getHeight() * 0.5f),
+			m_pObstacle->getWidth(), m_pObstacle->getHeight());*/
 			
 		m_displayGrid();
 
@@ -55,21 +53,23 @@ void PlayScene::update()
 	updateDisplayList();
 
 	m_bPlayerHasLOS = CollisionManager::LOSCheck(m_pPlayer, m_pPlaneSprite, m_pObstacle);
-	m_bPlayerHasLOS1 = CollisionManager::LOSCheck(m_pPlayer, m_pPlaneSprite, m_pObstacle1);
-	m_bPlayerHasLOS2 = CollisionManager::LOSCheck(m_pPlayer, m_pPlaneSprite, m_pObstacle2);
-	m_bPlayerHasLOS3 = CollisionManager::LOSCheck(m_pPlayer, m_pPlaneSprite, m_pObstacle3);
-
+	m_bPlayerHasLOS1 = CollisionManager::LOSCheck(m_pPlayer, m_pPlaneSprite2, m_pObstacle);
+	m_bEnemyHasLOS = CollisionManager::LOSCheck(m_pPlaneSprite, m_pPlayer, m_pObstacle);
+	m_bEnemyHasLOS1 = CollisionManager::LOSCheck(m_pPlaneSprite2, m_pPlayer, m_pObstacle);
+    m_bdetection = CollisionManager::circleAABBCheck(m_pPlaneSprite, m_pPlayer);
+	m_bdetection2 = CollisionManager::circleAABBCheck(m_pPlaneSprite2, m_pPlayer);
 	CollisionManager::AABBCheck(m_pPlayer, m_pPlaneSprite);
-
+	CollisionManager::AABBCheck(m_pPlayer, m_pPlaneSprite2);
 	CollisionManager::AABBCheck(m_pPlayer, m_pObstacle);
-	CollisionManager::AABBCheck(m_pPlayer, m_pObstacle1);
-	CollisionManager::AABBCheck(m_pPlayer, m_pObstacle2);
-	CollisionManager::AABBCheck(m_pPlayer, m_pObstacle3);
+
 
 	m_setGridLOS();
 
 
 	m_movePlaneToTargetNode();
+	cover();
+	m_bflee();
+	
 }
 
 void PlayScene::clean()
@@ -92,7 +92,7 @@ void PlayScene::handleEvents()
 			{
 				m_pPlayer->setAnimationState(PLAYER_RUN_RIGHT);
 				m_playerFacingRight = true;
-
+				SoundManager::Instance().playSound("steps", 0, 1);
 				m_pPlayer->getRigidBody()->velocity = glm::vec2(5.0f, 0.0f);
 				m_pPlayer->getTransform()->position += m_pPlayer->getRigidBody()->velocity;
 				m_pPlayer->getRigidBody()->velocity *= m_pPlayer->getRigidBody()->velocity * 0.9f;
@@ -101,7 +101,7 @@ void PlayScene::handleEvents()
 			{
 				m_pPlayer->setAnimationState(PLAYER_RUN_LEFT);
 				m_playerFacingRight = false;
-
+				SoundManager::Instance().playSound("steps", 0, 1);
 				m_pPlayer->getRigidBody()->velocity = glm::vec2(-5.0f, 0.0f);
 				m_pPlayer->getTransform()->position += m_pPlayer->getRigidBody()->velocity;
 				m_pPlayer->getRigidBody()->velocity *= m_pPlayer->getRigidBody()->velocity * 0.9f;
@@ -124,7 +124,6 @@ void PlayScene::handleEvents()
 	// handle player movement if no Game Controllers found
 	if (SDL_NumJoysticks() < 1)
 	{
-		
 		if (EventManager::Instance().isKeyDown(SDL_SCANCODE_A))
 		{
 			m_pPlayer->setAnimationState(PLAYER_RUN_LEFT);
@@ -132,10 +131,11 @@ void PlayScene::handleEvents()
 
 			SoundManager::Instance().playSound("steps", 0, 1);
 
+
+
 			m_pPlayer->getRigidBody()->velocity = glm::vec2(-5.0f, 0.0f);
 			m_pPlayer->getTransform()->position += m_pPlayer->getRigidBody()->velocity;
 			m_pPlayer->getRigidBody()->velocity *= m_pPlayer->getRigidBody()->velocity * 0.9f;
-
 		}
 		else if (EventManager::Instance().isKeyDown(SDL_SCANCODE_D))
 		{
@@ -152,16 +152,17 @@ void PlayScene::handleEvents()
 		{
 			m_pPlayer->setAnimationState(PLAYER_RUN_LEFT);
 
-
+			SoundManager::Instance().playSound("steps", 0, 1);
 			m_pPlayer->getRigidBody()->velocity = glm::vec2(0.0f, -5.0f);
 			m_pPlayer->getTransform()->position += m_pPlayer->getRigidBody()->velocity;
 			m_pPlayer->getRigidBody()->velocity *= m_pPlayer->getRigidBody()->velocity * 0.9f;
 		}
+
 		else if (EventManager::Instance().isKeyDown(SDL_SCANCODE_S))
 		{
 			m_pPlayer->setAnimationState(PLAYER_RUN_LEFT);
 
-
+			SoundManager::Instance().playSound("steps", 0, 1);
 			m_pPlayer->getRigidBody()->velocity = glm::vec2(0.0f, 5.0f);
 			m_pPlayer->getTransform()->position += m_pPlayer->getRigidBody()->velocity;
 			m_pPlayer->getRigidBody()->velocity *= m_pPlayer->getRigidBody()->velocity * 0.9f;
@@ -213,7 +214,21 @@ void PlayScene::handleEvents()
 		if (EventManager::Instance().isKeyDown(SDL_SCANCODE_K))
 		{
 			std::cout << "DEBUG: Enemies taking damage!" << std::endl;
-
+			Plane1hlth = Plane1hlth - 10;
+			Plane2hlth = Plane2hlth - 10;
+			if (Plane1hlth <= 25)
+			{
+				fleenow1 = true;
+				std::cout << "fleeing away plane 1 \n ";
+			}
+			
+			if (Plane2hlth <= 25)
+			{
+				fleenow2 = true;
+				std::cout << "fleeing away plane 2 \n ";
+			}
+		
+			is_hit = true;
 			m_bDebugKeys[K_KEY] = true;
 		}
 	}
@@ -320,9 +335,6 @@ void PlayScene::m_setGridLOS()
 	for (auto node : m_pGrid)
 	{
 		node->setLOS(CollisionManager::LOSCheck(node, m_pPlayer, m_pObstacle));
-		node->setLOS(CollisionManager::LOSCheck(node, m_pPlayer, m_pObstacle1));
-		node->setLOS(CollisionManager::LOSCheck(node, m_pPlayer, m_pObstacle2));
-		node->setLOS(CollisionManager::LOSCheck(node, m_pPlayer, m_pObstacle3));
 	}
 }
 
@@ -360,36 +372,86 @@ void PlayScene::m_displayPatrolPath()
 		std::cout << "(" << node->getTransform()->position.x << "," << node->getTransform()->position.y << ")" << std::endl;
 	}
 }
+void PlayScene::m_bflee()
+{
+	if (fleenow1)
+	{
+		m_targetPathNodeIndex = 0;
+	}
+	if (fleenow2)
+	{
+		m_targetPathNodeIndex1 = 0;
+	}
+}
+void PlayScene::cover()
+{
+	if(is_hit)
+	m_targetPathNodeIndex1 = 5;
+}
+
+
 
 void PlayScene::m_movePlaneToTargetNode()
 {
 	if (m_bPatrolMode)
 	{
 		m_pTargetPathNode = m_pPatrolPath[m_targetPathNodeIndex];
+		m_pTargetPathNode1 = m_pPatrolPath[m_targetPathNodeIndex1];
 		auto targetVector = Util::normalize(m_pTargetPathNode->getTransform()->position - m_pPlaneSprite->getTransform()->position);
+		auto targetVector2 = Util::normalize(m_pTargetPathNode1->getTransform()->position - m_pPlaneSprite2->getTransform()->position);
 
 		if (targetVector.x == 1)
 		{
 			m_pPlaneSprite->setAngle(90.0f);
+			
 		}
 
 		else if (targetVector.x == -1)
 		{
 			m_pPlaneSprite->setAngle(-90.0f);
+			
 		}
 
 		if (targetVector.y == 1)
 		{
 			m_pPlaneSprite->setAngle(180.0f);
+			
 		}
 
 		else if (targetVector.y == -1)
 		{
 			m_pPlaneSprite->setAngle(0.0f);
+		
+		}
+		if (targetVector2.x == 1)
+		{
+			
+			m_pPlaneSprite2->setAngle(90.0f);
 		}
 
+		else if (targetVector2.x == -1)
+		{
+		
+			m_pPlaneSprite2->setAngle(-90.0f);
+		}
+
+		if (targetVector2.y == 1)
+		{
+			
+			m_pPlaneSprite2->setAngle(180.0f);
+		}
+
+		else if (targetVector2.y == -1)
+		{
+			
+			m_pPlaneSprite2->setAngle(0.0f);
+		}
+
+
 		m_pPlaneSprite->getRigidBody()->velocity = targetVector;
+		m_pPlaneSprite2->getRigidBody()->velocity = targetVector2;
 		m_pPlaneSprite->getTransform()->position += m_pPlaneSprite->getRigidBody()->velocity * m_pPlaneSprite->getRigidBody()->maxSpeed;
+		m_pPlaneSprite2->getTransform()->position += m_pPlaneSprite2->getRigidBody()->velocity * m_pPlaneSprite2->getRigidBody()->maxSpeed;
 		if (m_pPlaneSprite->getTransform()->position == m_pTargetPathNode->getTransform()->position)
 		{
 			m_targetPathNodeIndex++;
@@ -398,20 +460,35 @@ void PlayScene::m_movePlaneToTargetNode()
 				m_targetPathNodeIndex = 0;
 			}
 		}
+		if (m_pPlaneSprite2->getTransform()->position == m_pTargetPathNode1->getTransform()->position)
+		{
+			m_targetPathNodeIndex1++;
+			if (m_targetPathNodeIndex1 > m_pPatrolPath.size() - 1)
+			{
+				m_targetPathNodeIndex1 = 0;
+			}
+		}
 	}
 }
 
 
 void PlayScene::start()
 {
+	Plane1hlth = Plane2hlth = 100;
 	m_bPlayerHasLOS = false;
-
+	m_bEnemyHasLOS = false;
+	m_bdetection2 = false;
+	m_bdetection = false;
+	fleenow1= false;
+	fleenow2 = false;
+	is_hit = false;
 	SoundManager::Instance().allocateChannels(16);
 	SoundManager::Instance().setMusicVolume(40);
 	SoundManager::Instance().setSoundVolume(40);
 	SoundManager::Instance().load("audio/Sun.wav", "sun", SOUND_MUSIC);
 	SoundManager::Instance().playMusic("sun", -1, 0);
 	SoundManager::Instance().load("audio/Footstep_Dirt_00.wav", "steps", SOUND_SFX);
+	SoundManager::Instance().load("audio/collide.wav", "col", SOUND_SFX);
 
 
 	m_buildGrid();
@@ -419,7 +496,7 @@ void PlayScene::start()
 	m_buildClockwisePatrolPath();
 	/*m_displayPatrolPath();*/
 	m_targetPathNodeIndex = 1;
-	
+	m_targetPathNodeIndex = 1;
 	
 	m_bDebugMode = false;
 	m_bPatrolMode = false;
@@ -922,30 +999,23 @@ void PlayScene::start()
 	m_pObstacle->getTransform()->position = glm::vec2(400.0f, 160.0f);
 	addChild(m_pObstacle);
 
-	m_pObstacle1 = new Obstacle();
-	m_pObstacle1->setWidth(80.0f);
-	m_pObstacle1->setHeight(80.0f);
-	m_pObstacle1->getTransform()->position = glm::vec2(480.0f, 160.0f);
-	addChild(m_pObstacle1);
-
-	m_pObstacle2 = new Obstacle();
-	m_pObstacle2->setWidth(80.0f);
-	m_pObstacle2->setHeight(80.0f);
-	m_pObstacle2->getTransform()->position = glm::vec2(80.0f, 80.0f);
-	addChild(m_pObstacle2);
-
-	m_pObstacle3= new Obstacle();
-	m_pObstacle3->setWidth(80.0f);
-	m_pObstacle3->setHeight(80.0f);
-	m_pObstacle3->getTransform()->position = glm::vec2(160.0f, 80.0f);
-	addChild(m_pObstacle3);
-	
+	m_pObstacle = new Obstacle();
+	m_pObstacle->setWidth(80.0f);
+	m_pObstacle->setHeight(80.0f);
+	m_pObstacle->getTransform()->position = glm::vec2(480.0f, 160.0f);
+	addChild(m_pObstacle);
 
 	// Plane Sprite
 	m_pPlaneSprite = new Plane();
 	m_pPlaneSprite->getTransform()->position = m_pPatrolPath[0]->getTransform()->position;
 	m_pPlaneSprite->getRigidBody()->maxSpeed = 5.0f;
 	addChild(m_pPlaneSprite);
+
+	m_pPlaneSprite2 = new Plane();
+	m_pPlaneSprite2->getTransform()->position = m_pPatrolPath[0]->getTransform()->position;
+	m_pPlaneSprite2->getRigidBody()->maxSpeed = 2.0f;
+	addChild(m_pPlaneSprite2);
+
 
 	// Player Sprite
 	m_pPlayer = new Player();

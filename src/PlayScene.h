@@ -13,7 +13,7 @@
 #include "PathNode.h"
 #include "GameObject.h"
 #include "Button.h"
-
+#include "Util.h"
 
 
 class PlayScene : public Scene
@@ -42,22 +42,27 @@ private:
 	glm::vec2 m_mousePosition;
 
 	Plane* m_pPlaneSprite;
+	Plane* m_pPlaneSprite2;
 	Player* m_pPlayer;
 	bool m_playerFacingRight;
-	bool m_bPlayerHasLOS, m_bPlayerHasLOS1, m_bPlayerHasLOS2, m_bPlayerHasLOS3;
-
+	bool m_bPlayerHasLOS;
+	bool m_bPlayerHasLOS1;
+	bool m_bEnemyHasLOS;
+	bool m_bEnemyHasLOS1;
+	bool m_bdetection;
+	bool m_bdetection2;
+	bool fleenow1;
+	bool fleenow2;
 	Obstacle* m_pObstacle;
-	Obstacle* m_pObstacle1;
-	Obstacle* m_pObstacle2;
-	Obstacle* m_pObstacle3;
 
 	Tile* m_pTile;
 
-
+	
 	bool m_bDebugMode;
 	bool m_bPatrolMode;
 
 	bool m_bDebugKeys[NUM_OF_DEBUG_KEYS];
+	bool is_hit;
 
 	std::vector<PathNode*> m_pGrid;
 
@@ -66,10 +71,13 @@ private:
 	void m_buildClockwisePatrolPath();
 	void m_displayPatrolPath();
 	int m_targetPathNodeIndex;
+	int m_targetPathNodeIndex1;
+	int Plane1hlth, Plane2hlth;
+	void m_bflee();
+	void cover();
 	PathNode* m_pTargetPathNode;
+	PathNode* m_pTargetPathNode1;
 	void m_movePlaneToTargetNode();
-
-	
 	
 	
 };
