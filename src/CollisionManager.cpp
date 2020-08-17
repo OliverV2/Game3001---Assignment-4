@@ -74,14 +74,14 @@ bool CollisionManager::AABBCheck(GameObject* object1, GameObject* object2)
 			case OBSTACLE:
 			{
 				std::cout << "Collision with Obstacle!" << std::endl;
-				SoundManager::Instance().playSound("yay", 0,1);
+				SoundManager::Instance().playSound("col", 0);
 			}
 				
 
 				break;
 			case PLANE:
 				std::cout << "Collision with Plane!" << std::endl;
-
+				SoundManager::Instance().playSound("col", 0);
 				break;
 			default:
 				

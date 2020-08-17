@@ -440,6 +440,7 @@ void PlayScene::start()
 	SoundManager::Instance().load("audio/Sun.wav", "sun", SOUND_MUSIC);
 	SoundManager::Instance().playMusic("sun", -1, 0);
 	SoundManager::Instance().load("audio/Footstep_Dirt_00.wav", "steps", SOUND_SFX);
+	SoundManager::Instance().load("audio/collide.wav", "col", SOUND_SFX);
 
 
 	m_buildGrid();
