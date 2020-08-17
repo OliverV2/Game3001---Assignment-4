@@ -19,7 +19,9 @@ void PlayScene::draw()
 
 	if(m_bDebugMode)
 	{
-		auto LOSColour = (!m_bPlayerHasLOS) ? glm::vec4(1.0f, 0.0f, 0.0f, 1.0f) : glm::vec4(0.0f, 1.0f, 0.0f, 1.0f);
+		auto LOSColour = (!m_bPlayerHasLOS || !m_bPlayerHasLOS1 || !m_bPlayerHasLOS2 || !m_bPlayerHasLOS3) ? glm::vec4(1.0f, 0.0f, 0.0f, 1.0f) : glm::vec4(0.0f, 1.0f, 0.0f, 1.0f);
+		
+		
 
 		Util::DrawLine(m_pPlayer->getTransform()->position, m_pPlaneSprite->getTransform()->position, LOSColour);
 
@@ -52,7 +54,10 @@ void PlayScene::update()
 {
 	updateDisplayList();
 
-	m_bPlayerHasLOS = CollisionManager::LOSCheck(m_pPlayer, m_pPlaneSprite, m_pObstacle, m_pObstacle1, m_pObstacle2, m_pObstacle3);
+	m_bPlayerHasLOS = CollisionManager::LOSCheck(m_pPlayer, m_pPlaneSprite, m_pObstacle);
+	m_bPlayerHasLOS1 = CollisionManager::LOSCheck(m_pPlayer, m_pPlaneSprite, m_pObstacle1);
+	m_bPlayerHasLOS2 = CollisionManager::LOSCheck(m_pPlayer, m_pPlaneSprite, m_pObstacle2);
+	m_bPlayerHasLOS3 = CollisionManager::LOSCheck(m_pPlayer, m_pPlaneSprite, m_pObstacle3);
 
 	CollisionManager::AABBCheck(m_pPlayer, m_pPlaneSprite);
 
@@ -314,8 +319,10 @@ void PlayScene::m_setGridLOS()
 {
 	for (auto node : m_pGrid)
 	{
-		node->setLOS(CollisionManager::LOSCheck(node, m_pPlayer, m_pObstacle, m_pObstacle1, m_pObstacle2, m_pObstacle3));
-		
+		node->setLOS(CollisionManager::LOSCheck(node, m_pPlayer, m_pObstacle));
+		node->setLOS(CollisionManager::LOSCheck(node, m_pPlayer, m_pObstacle1));
+		node->setLOS(CollisionManager::LOSCheck(node, m_pPlayer, m_pObstacle2));
+		node->setLOS(CollisionManager::LOSCheck(node, m_pPlayer, m_pObstacle3));
 	}
 }
 

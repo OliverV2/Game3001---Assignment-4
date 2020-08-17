@@ -44,7 +44,7 @@ private:
 	Plane* m_pPlaneSprite;
 	Player* m_pPlayer;
 	bool m_playerFacingRight;
-	bool m_bPlayerHasLOS;
+	bool m_bPlayerHasLOS, m_bPlayerHasLOS1, m_bPlayerHasLOS2, m_bPlayerHasLOS3;
 
 	Obstacle* m_pObstacle;
 	Obstacle* m_pObstacle1;
