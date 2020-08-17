@@ -46,7 +46,9 @@ private:
 	Player* m_pPlayer;
 	bool m_playerFacingRight;
 	bool m_bPlayerHasLOS;
+	bool m_bPlayerHasLOS1;
 	bool m_bEnemyHasLOS;
+	bool m_bEnemyHasLOS1;
 	bool m_bdetection;
 	bool m_bdetection2;
 

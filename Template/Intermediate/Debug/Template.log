@@ -1,241 +1,66 @@
-﻿  EndScene.cpp
-  EventManager.cpp
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\EventManager.cpp(76,29): warning C4018: '<': signed/unsigned mismatch
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\EventManager.cpp(133,37): warning C4244: '=': conversion from 'Sint32' to 'T', possible loss of data
+﻿  CollisionManager.cpp
+C:\Users\deepa\source\repos\Game3001---Assignment-42\src\CollisionManager.cpp(9,28): warning C4244: 'initializing': conversion from 'T' to 'int', possible loss of data
           with
           [
               T=float
           ]
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\EventManager.cpp(134,37): warning C4244: '=': conversion from 'Sint32' to 'T', possible loss of data
+C:\Users\deepa\source\repos\Game3001---Assignment-42\src\CollisionManager.cpp(9,21): warning C4244: 'initializing': conversion from 'T' to 'const int', possible loss of data
           with
           [
               T=float
           ]
-  Game.cpp
-  PlayScene.cpp
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(416,30): warning C4018: '>': signed/unsigned mismatch
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(424,30): warning C4018: '>': signed/unsigned mismatch
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(459,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(460,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(465,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(466,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(471,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(472,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(477,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(478,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(483,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(484,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(489,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(490,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(495,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(496,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(501,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(502,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(507,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(508,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(513,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(514,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(520,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(521,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(526,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(527,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(532,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(533,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(538,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(539,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(544,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(545,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(550,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(551,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(556,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(557,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(562,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(563,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(568,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(569,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(574,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(575,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(582,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(583,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(588,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(589,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(594,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(595,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(600,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(601,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(606,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(607,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(612,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(613,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(618,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(619,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(624,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(625,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(630,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(631,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(636,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(637,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(644,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(645,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(650,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(651,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(656,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(657,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(662,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(663,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(668,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(669,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(674,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(675,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(680,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(681,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(686,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(687,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(692,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(693,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(698,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(699,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(705,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(706,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(711,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(712,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(717,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(718,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(723,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(724,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(729,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(730,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(735,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(736,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(741,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(742,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(747,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(748,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(753,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(754,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(759,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(760,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(767,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(768,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(773,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(774,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(779,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(780,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(785,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(786,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(791,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(792,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(797,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(798,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(803,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(804,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(809,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(810,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(815,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(816,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(821,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(822,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(828,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(829,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(834,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(835,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(840,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(841,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(846,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(847,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(852,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(853,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(858,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(859,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(864,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(865,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(870,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(871,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(876,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(877,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(882,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(883,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(889,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(890,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(895,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(896,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(901,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(902,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(907,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(908,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(913,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(914,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(919,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(920,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(925,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(926,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(931,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(932,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(937,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(938,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(943,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(944,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(950,24): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(951,25): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(956,24): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\PlayScene.cpp(957,25): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-  StartScene.cpp
-  TextureManager.cpp
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\TextureManager.cpp(137,36): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\TextureManager.cpp(137,21): warning C4244: 'initializing': conversion from 'double' to 'const int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\TextureManager.cpp(138,37): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\TextureManager.cpp(138,21): warning C4244: 'initializing': conversion from 'double' to 'const int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\TextureManager.cpp(180,36): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\TextureManager.cpp(180,21): warning C4244: 'initializing': conversion from 'double' to 'const int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\TextureManager.cpp(181,37): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\TextureManager.cpp(181,21): warning C4244: 'initializing': conversion from 'double' to 'const int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\TextureManager.cpp(197,34): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\TextureManager.cpp(197,26): warning C4244: 'initializing': conversion from 'float' to 'const int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\TextureManager.cpp(225,33): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\TextureManager.cpp(225,26): warning C4244: 'initializing': conversion from 'float' to 'const int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\TextureManager.cpp(232,32): warning C4018: '>': signed/unsigned mismatch
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\TextureManager.cpp(260,36): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\TextureManager.cpp(260,21): warning C4244: 'initializing': conversion from 'double' to 'const int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\TextureManager.cpp(261,37): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\TextureManager.cpp(261,21): warning C4244: 'initializing': conversion from 'double' to 'const int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\TextureManager.cpp(290,36): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\TextureManager.cpp(290,21): warning C4244: 'initializing': conversion from 'double' to 'const int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\TextureManager.cpp(291,37): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\TextureManager.cpp(291,21): warning C4244: 'initializing': conversion from 'double' to 'const int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\TextureManager.cpp(310,11): warning C4244: '=': conversion from 'int' to 'T', possible loss of data
+C:\Users\deepa\source\repos\Game3001---Assignment-42\src\CollisionManager.cpp(10,28): warning C4244: 'initializing': conversion from 'T' to 'int', possible loss of data
           with
           [
               T=float
           ]
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\TextureManager.cpp(311,11): warning C4244: '=': conversion from 'int' to 'T', possible loss of data
+C:\Users\deepa\source\repos\Game3001---Assignment-42\src\CollisionManager.cpp(10,21): warning C4244: 'initializing': conversion from 'T' to 'const int', possible loss of data
           with
           [
               T=float
           ]
-  main.cpp
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\main.cpp(9,32): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-  ship.cpp
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\ship.cpp(12,15): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+C:\Users\deepa\source\repos\Game3001---Assignment-42\src\CollisionManager.cpp(20,72): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\deepa\source\repos\Game3001---Assignment-42\src\CollisionManager.cpp(20,24): warning C4244: 'initializing': conversion from 'float' to 'const int', possible loss of data
+C:\Users\deepa\source\repos\Game3001---Assignment-42\src\CollisionManager.cpp(57,41): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\deepa\source\repos\Game3001---Assignment-42\src\CollisionManager.cpp(57,22): warning C4244: 'initializing': conversion from 'int' to 'const float', possible loss of data
+C:\Users\deepa\source\repos\Game3001---Assignment-42\src\CollisionManager.cpp(58,43): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\deepa\source\repos\Game3001---Assignment-42\src\CollisionManager.cpp(58,23): warning C4244: 'initializing': conversion from 'int' to 'const float', possible loss of data
+C:\Users\deepa\source\repos\Game3001---Assignment-42\src\CollisionManager.cpp(59,41): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\deepa\source\repos\Game3001---Assignment-42\src\CollisionManager.cpp(59,22): warning C4244: 'initializing': conversion from 'int' to 'const float', possible loss of data
+C:\Users\deepa\source\repos\Game3001---Assignment-42\src\CollisionManager.cpp(60,43): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\deepa\source\repos\Game3001---Assignment-42\src\CollisionManager.cpp(60,23): warning C4244: 'initializing': conversion from 'int' to 'const float', possible loss of data
+C:\Users\deepa\source\repos\Game3001---Assignment-42\src\CollisionManager.cpp(182,9): warning C4244: 'return': conversion from 'float' to 'int', possible loss of data
+C:\Users\deepa\source\repos\Game3001---Assignment-42\src\CollisionManager.cpp(191,36): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\deepa\source\repos\Game3001---Assignment-42\src\CollisionManager.cpp(191,25): warning C4244: 'initializing': conversion from 'float' to 'const int', possible loss of data
+C:\Users\deepa\source\repos\Game3001---Assignment-42\src\CollisionManager.cpp(193,38): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\deepa\source\repos\Game3001---Assignment-42\src\CollisionManager.cpp(193,26): warning C4244: 'initializing': conversion from 'float' to 'const int', possible loss of data
+C:\Users\deepa\source\repos\Game3001---Assignment-42\src\CollisionManager.cpp(196,60): warning C4244: 'argument': conversion from 'const int' to 'float', possible loss of data
+C:\Users\deepa\source\repos\Game3001---Assignment-42\src\CollisionManager.cpp(196,50): warning C4244: 'argument': conversion from 'const int' to 'float', possible loss of data
+C:\Users\deepa\source\repos\Game3001---Assignment-42\src\CollisionManager.cpp(221,36): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\deepa\source\repos\Game3001---Assignment-42\src\CollisionManager.cpp(221,25): warning C4244: 'initializing': conversion from 'float' to 'const int', possible loss of data
+C:\Users\deepa\source\repos\Game3001---Assignment-42\src\CollisionManager.cpp(223,38): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\deepa\source\repos\Game3001---Assignment-42\src\CollisionManager.cpp(223,26): warning C4244: 'initializing': conversion from 'float' to 'const int', possible loss of data
+C:\Users\deepa\source\repos\Game3001---Assignment-42\src\CollisionManager.cpp(226,60): warning C4244: 'argument': conversion from 'const int' to 'float', possible loss of data
+C:\Users\deepa\source\repos\Game3001---Assignment-42\src\CollisionManager.cpp(226,50): warning C4244: 'argument': conversion from 'const int' to 'float', possible loss of data
+C:\Users\deepa\source\repos\Game3001---Assignment-42\src\CollisionManager.cpp(243,19): warning C4244: 'return': conversion from '_Ty' to 'int', possible loss of data
           with
           [
-              T=float
+              _Ty=float
           ]
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\ship.cpp(13,16): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+C:\Users\deepa\source\repos\Game3001---Assignment-42\src\CollisionManager.cpp(250,35): warning C4244: 'initializing': conversion from 'const _Ty' to 'int', possible loss of data
           with
           [
-              T=float
+              _Ty=float
           ]
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\ship.cpp(37,46): warning C4244: 'argument': conversion from 'const T' to 'int', possible loss of data
+C:\Users\deepa\source\repos\Game3001---Assignment-42\src\CollisionManager.cpp(250,25): warning C4244: 'initializing': conversion from 'const _Ty' to 'const int', possible loss of data
           with
           [
-              T=float
+              _Ty=float
           ]
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\ship.cpp(37,43): warning C4244: 'argument': conversion from 'const T' to 'int', possible loss of data
-          with
-          [
-              T=float
-          ]
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\ship.cpp(149,35): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-C:\Users\deepa\source\repos\Game3001---Assignment-42\src\ship.cpp(149,22): warning C4244: 'initializing': conversion from 'float' to 'const int', possible loss of data
-  Generating Code...
+C:\Users\deepa\source\repos\Game3001---Assignment-42\src\CollisionManager.cpp(253,19): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\deepa\source\repos\Game3001---Assignment-42\src\CollisionManager.cpp(255,20): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\deepa\source\repos\Game3001---Assignment-42\src\CollisionManager.cpp(297,38): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\deepa\source\repos\Game3001---Assignment-42\src\CollisionManager.cpp(297,23): warning C4244: 'initializing': conversion from 'double' to 'const float', possible loss of data
+C:\Users\deepa\source\repos\Game3001---Assignment-42\src\CollisionManager.cpp(298,38): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\deepa\source\repos\Game3001---Assignment-42\src\CollisionManager.cpp(298,23): warning C4244: 'initializing': conversion from 'double' to 'const float', possible loss of data
   Template.vcxproj -> C:\Users\deepa\source\repos\Game3001---Assignment-42\bin\Debug\Template.exe
