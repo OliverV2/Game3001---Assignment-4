@@ -47,6 +47,8 @@ private:
 	bool m_playerFacingRight;
 	bool m_bPlayerHasLOS;
 	bool m_bEnemyHasLOS;
+	bool m_bdetection;
+	bool m_bdetection2;
 
 	Obstacle* m_pObstacle;
 
