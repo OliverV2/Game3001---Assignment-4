@@ -75,6 +75,8 @@ private:
 	int Plane1hlth, Plane2hlth;
 	void m_bflee();
 	void cover();
+	void range();
+	void close();
 	PathNode* m_pTargetPathNode;
 	PathNode* m_pTargetPathNode1;
 	void m_movePlaneToTargetNode();

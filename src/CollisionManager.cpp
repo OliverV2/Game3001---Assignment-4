@@ -272,7 +272,7 @@ bool CollisionManager::circleAABBCheck(GameObject* object1, GameObject* object2)
 			case PLAYER:
 			
 				std::cout << "player is in detection radius" << std::endl;
-				object1->getTransform()->position = object2->getTransform()->position + 80.0f;
+				/*object1->getTransform()->position = object2->getTransform()->position + 80.0f;*/
 			
 			default:
 				

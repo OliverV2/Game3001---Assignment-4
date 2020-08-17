@@ -61,7 +61,10 @@ void PlayScene::update()
 
 
 	m_movePlaneToTargetNode();
+	
+	range();
 	cover();
+	close();
 	m_bflee();
 	
 }
@@ -69,6 +72,8 @@ void PlayScene::update()
 void PlayScene::clean()
 {
 	removeAllChildren();
+	
+	
 
 }
 
@@ -379,11 +384,26 @@ void PlayScene::m_bflee()
 }
 void PlayScene::cover()
 {
-	if(is_hit)
-	m_targetPathNodeIndex1 = 5;
+	if (is_hit)
+	{
+		m_targetPathNodeIndex1 = 6;
+	}
+}
+void PlayScene::range()
+{
+	if(CollisionManager::circleAABBCheck(m_pPlaneSprite2, m_pPlayer))
+	m_targetPathNodeIndex1 = 2;
+	std::cout << "plane is in range \n";
 }
 
-
+void PlayScene::close()
+{
+	if(CollisionManager::circleAABBCheck(m_pPlaneSprite, m_pPlayer))
+	
+		m_pPlaneSprite->getTransform()->position =  m_pPlayer->getTransform()->position + 80.0f;
+		std::cout << "plane is in close range \n";
+	
+}
 
 void PlayScene::m_movePlaneToTargetNode()
 {
